@@ -1,0 +1,1 @@
+INSERT INTO COLABORADOR(nome, senha, score, chefe) VALUES ('NOME', 'SENHA', 'SCORE', 'ID_CHEFE');

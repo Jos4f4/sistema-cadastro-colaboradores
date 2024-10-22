@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        font-size: 2rem;
+        color: #333;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        color: #555;
+    }
+    
+    .menu {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .menu li {
+        margin: 15px 0;
+    }
+    
+    .menu li a {
+        text-decoration: none;
+        font-size: 1.0rem;
+        color: #007bff;
+        border: 1.5px solid #007bff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .menu li a:hover {
+        background-color: #007bff;
+        color: white;
+    }
+    
+</style>
+<body>
+
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <p>Clique nos links abaixo para seguir com os endpoints:</p>
+
+        <ul class="menu">
+            <li><a href="buscar-todos-id.html">Buscar por ID</a></li>
+            <li><a href="cadastro-atualizar.html">Atualizar um cadastro de colaborador</a></li>
+            <li><a href="cadastro-colaboradores.html">Inserir um cadastro de colaborador</a></li>
+            <li><a href="cadastro-deletar.html">Deletar cadastro de colaborador</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

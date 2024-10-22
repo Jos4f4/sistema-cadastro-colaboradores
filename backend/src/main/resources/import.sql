@@ -1,0 +1,3 @@
+INSERT INTO tb_colaborador (nome, departamento, cargo, salario, descricaocargo) VALUES ('Joao Vieira', 'Recursos Humanos', 'Analista de T&D', 4000.0, 'Lorem ipsum dolor sit amet');
+INSERT INTO tb_colaborador (nome, departamento, cargo, salario, descricaocargo) VALUES ('Joao Pedro', 'Tecnologia da Informação', 'Analista de Redes', 4000.0, 'Lorem ipsum dolor sit amet');
+INSERT INTO tb_colaborador (nome, departamento, cargo, salario, descricaocargo) VALUES ('Pedro Lucas', 'Fiscal', 'Especialista Fiscal', 8000.0, 'Lorem ipsum dolor sit amet');

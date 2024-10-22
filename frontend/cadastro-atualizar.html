@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização de Colaborador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 80px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Atualização de Colaborador</h2>
+        <div class="form-group">
+            <label for="id">ID do Colaborador</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="departamento">Departamento</label>
+            <input type="text" id="departamento" name="departamento" required>
+        </div>
+        <div class="form-group">
+            <label for="cargo">Cargo</label>
+            <input type="text" id="cargo" name="cargo" required>
+        </div>
+        <div class="form-group">
+            <label for="salario">Salário</label>
+            <input type="number" id="salario" name="salario" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="descricaocargo">Descrição do Cargo</label>
+            <textarea id="descricaocargo" name="descricaocargo" required></textarea>
+        </div>
+        <button type="button" onclick="atualizarColaborador()">Atualizar</button>
+    </div>
+
+    <script>
+        function atualizarColaborador() {
+            // Captura os dados do formulário
+            const id = document.getElementById('id').value;
+            const nome = document.getElementById('nome').value;
+            const departamento = document.getElementById('departamento').value;
+            const cargo = document.getElementById('cargo').value;
+            const salario = document.getElementById('salario').value;
+            const descricaocargo = document.getElementById('descricaocargo').value;
+
+
+            const colaborador = {
+                nome: nome,
+                departamento: departamento,
+                cargo: cargo,
+                salario: salario,
+                descricaocargo: descricaocargo
+            };
+
+            // Envia os dados para o endpoint http://localhost:8080/colaborador/{id}
+            fetch(`http://localhost:8080/colaborador/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(colaborador)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Colaborador atualizado com sucesso!');
+                } else {
+                    alert('Erro ao atualizar colaborador.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao atualizar colaborador.');
+            });
+        }
+    </script>
+
+</body>
+</html>
