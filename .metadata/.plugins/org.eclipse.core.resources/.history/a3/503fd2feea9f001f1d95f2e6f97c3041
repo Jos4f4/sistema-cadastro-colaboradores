@@ -1,0 +1,5 @@
+package com.projeto.backend.controllers.handlers;
+
+public class ControllerExceptionHandler {
+
+}
