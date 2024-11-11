@@ -1,0 +1,5 @@
+package com.projeto.backend.services.exceptions;
+
+public class ResourceNotFoundException {
+
+}

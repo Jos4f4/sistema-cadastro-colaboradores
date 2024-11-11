@@ -1,2 +1,0 @@
-INSERT INTO tb_colaborador (nome, departamento, cargo, salario, descricaocargo) VALUES ('Joao', 'Recursos Humanos', 'Analista de T&D',
-	 4000.0, 'Lorem ipsum dolor sit amet');
