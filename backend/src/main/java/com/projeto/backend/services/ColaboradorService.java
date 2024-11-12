@@ -15,7 +15,7 @@ import com.projeto.backend.repository.ColaboradorRepository;
 public class ColaboradorService {
 	
 	@Autowired
-	ColaboradorRepository colaboradorRepository;
+	private ColaboradorRepository colaboradorRepository;
 
 	
 	@Transactional(readOnly = true)

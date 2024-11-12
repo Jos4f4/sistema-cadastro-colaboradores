@@ -24,7 +24,7 @@ import com.projeto.backend.services.ColaboradorService;
 public class ColaboradorController {
 	
 	@Autowired
-	ColaboradorService colaboradorService;
+	private ColaboradorService colaboradorService;
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<ColaboradorDTO> findById(@PathVariable Long id) {
